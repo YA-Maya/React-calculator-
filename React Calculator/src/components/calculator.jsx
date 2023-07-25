@@ -30,13 +30,14 @@ const Calculator = () => {
       {/* Input field to display the current input value */}
       <input type="text" value={input} readOnly />
 
+
       {/* Operator buttons */}
-      <div className="operator">
-        <button onClick={() => handleButtonClick('+')}>+</button>
-        <button onClick={() => handleButtonClick('-')}>-</button>
-        <button onClick={() => handleButtonClick('/')}>/</button>
-        <button onClick={() => handleButtonClick('*')}>*</button>
-        <button onClick={handleClear}>C</button>
+      <div className="operator outer">
+        <button className='inner' onClick={() => handleButtonClick('+')}>+</button>
+        <button className='inner' onClick={() => handleButtonClick('-')}>-</button>
+        <button className='inner' onClick={() => handleButtonClick('/')}>/</button>
+        <button className='inner' onClick={() => handleButtonClick('*')}>*</button>
+        <button className='inner' onClick={handleClear}>C</button>
       </div>
 
       {/* Numeric and other buttons */}

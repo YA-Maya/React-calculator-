@@ -8,19 +8,20 @@
   text-align: center;
   background-color: black;
   margin-top: 100px;
+  border-radius: 9px;
 }
 
 /* Styling for the input field */
 input {
   width: 92%;
   font-size: 24px;
-  padding: 10px;
+  padding: 12px;
   height: 90px;
   color: white;
   border-radius: 7px;
   border: 1px solid #FFFEFE;
   background: #000;
-  margin-top: 10px;
+  margin: 2px 0;
   text-align: right;
   font-size: 100px;
 }
@@ -34,18 +35,18 @@ input {
   color: gray;
   margin-left: 10px;
   margin-right: 10px;
-  margin-top: 1px;
+  margin-top: 3px;
+  margin-bottom: 5px;
 }
 
 /* Styling for the operator buttons */
 .operator button {
   color: white;
   background-color: lightgray;
-  margin-top: 5px;
   height: 70px;
-  border-radius: 5px;
+  border-radius: 7px;
   font-size: 25px;
-  margin-bottom: 10px;
+
 }
 
 /* Styling for the buttons from 0 to 9 and . and = */
@@ -79,7 +80,7 @@ input {
 }
 
 .outer {
-  background: linear-gradient(330deg, #ff0000, #ff7700, #fffb00, #00ff00, #0077ff, #8c00ff, #ff00f7);
+  background: linear-gradient(315deg, #ff0000, #ff7700, #fffb00, #00ff00, #0077ff, #8c00ff, #ff00f7);
   background-size: 200% 200%;
   animation: gradient 2s ease infinite;
   padding: 2px;
