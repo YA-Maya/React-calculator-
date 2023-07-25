@@ -2,8 +2,8 @@
 
 /* Styling for the calculator container */
 .calculator {
-  width: 543px;
-  height: 870px;
+  width: 400px;
+  height: 570px;
   margin: 0 auto;
   text-align: center;
   background-color: black;
@@ -42,7 +42,6 @@ input {
   color: white;
   background-color: lightgray;
   margin-top: 5px;
-  width: 96px;
   height: 70px;
   border-radius: 5px;
   font-size: 25px;
@@ -52,14 +51,17 @@ input {
 /* Styling for the buttons from 0 to 9 and . and = */
 .buttons {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 1px;
   border-radius: 7px;
-  background: #000;
-  width: 515px;
-  height: 648px;
+  /* background: #000; */
+  height: 350px;
   margin-left: 10px;
   margin-right: 10px;
+  position: relative;
+  background: linear-gradient(45deg, #ff0000, #ff7700, #fffb00, #00ff00, #0077ff, #8c00ff, #ff00f7);
+  background-size: 150% 150%;
+  animation: gradient 20s linear infinite;
 }
 
 /* Styling for the buttons inside the .buttons section */
@@ -69,4 +71,38 @@ input {
   background-color: black;
   border-radius: 7px;
   color: #FFFEFE;
+  animation: gradient 5s ease infinite;
+  background-size: 400% 400%;
+  background-attachment: fixed;
+  position: relative;
+
+}
+
+.outer {
+  background: linear-gradient(330deg, #ff0000, #ff7700, #fffb00, #00ff00, #0077ff, #8c00ff, #ff00f7);
+  background-size: 200% 200%;
+  animation: gradient 2s ease infinite;
+  padding: 2px;
+  border-radius: 9px;
+
+}
+
+/* Inner div */
+.inner {
+  background: black;
+  border-radius: 7px;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  50% {
+    background-position: 100% 100%;
+  }
+
+  100% {
+    background-position: 0% 0%;
+  }
 }
