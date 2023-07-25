@@ -1,42 +1,109 @@
-#root {
-  max-width: 1280px;
+/* src/Calculator.css */
+
+/* Styling for the calculator container */
+.calculator {
+  width: 400px;
+  height: 570px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+  background-color: black;
+  margin-top: 100px;
+  border-radius: 9px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Styling for the input field */
+input {
+  width: 92%;
+  font-size: 24px;
+  padding: 12px;
+  height: 90px;
+  color: white;
+  border-radius: 7px;
+  border: 1px solid #FFFEFE;
+  background: #000;
+  margin: 2px 0;
+  text-align: right;
+  font-size: 100px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Operator section */
+.operator {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 1px;
+  font-size: 24px;
+  color: gray;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 3px;
+  margin-bottom: 5px;
+}
+
+/* Styling for the operator buttons */
+.operator button {
+  color: white;
+  background-color: lightgray;
+  height: 70px;
+  border-radius: 7px;
+  font-size: 25px;
+
+}
+
+/* Styling for the buttons from 0 to 9 and . and = */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1px;
+  border-radius: 7px;
+  /* background: #000; */
+  height: 350px;
+  margin-left: 10px;
+  margin-right: 10px;
+  position: relative;
+  background: linear-gradient(45deg, #ff0000, #ff7700, #fffb00, #00ff00, #0077ff, #8c00ff, #ff00f7);
+  background-size: 150% 150%;
+  animation: gradient 20s linear infinite;
+}
+
+/* Styling for the buttons inside the .buttons section */
+.buttons button {
+  font-size: 24px;
+  padding: 10px;
+  background-color: black;
+  border-radius: 7px;
+  color: #FFFEFE;
+  animation: gradient 5s ease infinite;
+  background-size: 400% 400%;
+  background-attachment: fixed;
+  position: relative;
+
+}
+
+.outer {
+  background: linear-gradient(315deg, #ff0000, #ff7700, #fffb00, #00ff00, #0077ff, #8c00ff, #ff00f7);
+  background-size: 200% 200%;
+  animation: gradient 2s ease infinite;
+  padding: 2px;
+  border-radius: 9px;
+
+}
+
+/* Inner div */
+.inner {
+  background: black;
+  border-radius: 7px;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 0%;
   }
-  to {
-    transform: rotate(360deg);
+
+  50% {
+    background-position: 100% 100%;
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  100% {
+    background-position: 0% 0%;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
